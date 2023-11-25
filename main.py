@@ -1,5 +1,6 @@
 from __future__ import (absolute_import, division, print_function, unicode_literals)
 from test_strategy import TestStrategy
+from indicators_strategy import SMAStrategy
 from backtest_manager import BacktestManager
 import os.path
 import sys
@@ -11,5 +12,6 @@ if __name__ == '__main__':
 
     backtest_manager = BacktestManager(datapath)
     backtest_manager.add_data()
-    backtest_manager.add_strategy(TestStrategy)
+   ## backtest_manager.add_strategy(TestStrategy)
+    backtest_manager.add_strategy(SMAStrategy)
     backtest_manager.run()

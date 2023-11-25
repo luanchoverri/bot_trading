@@ -27,3 +27,5 @@ class BacktestManager:
         print('Starting Portfolio Value: %.2f' % self.cerebro.broker.getvalue())
         self.cerebro.run()
         print('Final Portfolio Value: %.2f' % self.cerebro.broker.getvalue())
+
+        self.cerebro.plot()
